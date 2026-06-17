@@ -1,0 +1,9 @@
+node_modules/
+dist/
+dev.sqlite3
+prod.sqlite3
+.env
+uploads/images/*
+!uploads/images/.gitkeep
+logs/*
+*.log
