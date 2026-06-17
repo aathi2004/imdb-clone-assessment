@@ -1,3 +1,7 @@
+[Bug Report Google Doc](https://docs.google.com/document/d/1bjBPinDobbGGYf21VBRReUQeBDufZeWl0uk8loJuOFI/edit?usp=sharing)
+
+[Bug Report Google Doc](https://docs.google.com/document/d/1bjBPinDobbGGYf21VBRReUQeBDufZeWl0uk8loJuOFI/edit?usp=sharing)
+
 # TECH ASSESSMENT
 
 This repository contains both the frontend (React/Vite) and the backend (Node.js/Express) for the IMDB Clone application.
@@ -66,3 +70,5 @@ To evaluate your debugging skills, please follow these submission guidelines car
 3. For every bug you find and fix, document it in a Google Doc using the format provided in the `Candidate_Bug_Report.md` template. Please explain the symptom and your fix in plain English.
 4. Add the link to your Google Doc at the top of your repository's `README.md` (make sure the Google Doc permissions are set to "Anyone with the link can view").
 5. Share the link to your new repository with your recruiter or interviewer to complete the assessment.
+
+
