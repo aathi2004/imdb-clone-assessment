@@ -6,7 +6,7 @@
 .view-producer-page-title { font-size: 20px; margin: 0; }
 .view-producer-content { display: flex; gap: 24px; }
 .view-producer-image-section { width: 200px; }
-.view-producer-image { width: 200px; height: 250px; object-fit: cover; border-radius: 8px; }
+.view-producer-image { width: 200px; height: 250px; object-fit: cover; object-position: center; display: block; border-radius: 8px; }
 .view-producer-info-section { flex: 1; display: flex; flex-direction: column; gap: 12px; }
 .view-producer-info-row { display: flex; gap: 8px; }
 .view-producer-label { font-weight: 600; color: #555; min-width: 80px; }

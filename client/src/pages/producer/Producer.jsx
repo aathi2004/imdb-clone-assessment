@@ -24,8 +24,10 @@ const Producers = ({ viewState, editState, addState }) => {
     fetchProducers();
   }, []);
 
-  const filteredProducers = producers.filter((producer) =>
-    producer.name?.toLowerCase().includes(filter.name?.toLowerCase() || ""),
+  const filteredProducers = producers.filter(
+    (producer) =>
+      producer.image &&
+      producer.name?.toLowerCase().includes(filter.name?.toLowerCase() || ""),
   );
 
   const handleDelete = async (id) => {

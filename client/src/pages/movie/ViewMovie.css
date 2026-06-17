@@ -5,7 +5,7 @@
 .viewmovie-title { margin: 0 0 20px; font-size: 22px; }
 .viewmovie-content { display: flex; gap: 24px; }
 .viewmovie-image-section { width: 220px; flex-shrink: 0; }
-.viewmovie-image { width: 220px; height: 300px; object-fit: cover; border-radius: 8px; }
+.viewmovie-image { width: 220px; height: 300px; object-fit: cover; object-position: center; display: block; border-radius: 8px; }
 .viewmovie-info-section { flex: 1; display: flex; flex-direction: column; gap: 12px; }
 .viewmovie-info-row { display: flex; gap: 8px; }
 .viewmovie-info-row .label { font-weight: 600; color: #555; min-width: 100px; }
