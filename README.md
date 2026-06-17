@@ -1,8 +1,10 @@
-[Bug Report Google Doc](https://docs.google.com/document/d/1bjBPinDobbGGYf21VBRReUQeBDufZeWl0uk8loJuOFI/edit?usp=sharing)
+# Bug Report
 
 [Bug Report Google Doc](https://docs.google.com/document/d/1bjBPinDobbGGYf21VBRReUQeBDufZeWl0uk8loJuOFI/edit?usp=sharing)
 
-# TECH ASSESSMENT
+---
+
+# TECH ASSESSMENT - IMDB Clone
 
 This repository contains both the frontend (React/Vite) and the backend (Node.js/Express) for the IMDB Clone application.
 
@@ -15,60 +17,90 @@ This repository contains both the frontend (React/Vite) and the backend (Node.js
 - `logs/` - Application logs
 - `uploads/` - User-uploaded files
 
-## Getting Started
-
-### Prerequisites
+## Prerequisites
 
 - Node.js (v16+)
 - npm
 
-### Installation & Running Locally
+## Installation & Running Locally
 
 1. Clone the repository and navigate to the project root.
-2. Copy `.env.example` to `.env` (if applicable) and fill in your variables.
+
+2. Copy `.env.example` to `.env` and fill in your variables:
+   ```bash
+   cp .env.example .env
+   ```
+
 3. Install root and client dependencies:
    ```bash
    npm install
    cd client && npm install && cd ..
    ```
+
 4. Create the local SQLite database file:
-   - **Mac/Linux:**
-     ```bash
-     touch dev.sqlite3
-     ```
    - **Windows (PowerShell):**
      ```powershell
      New-Item dev.sqlite3 -Type File
      ```
-   *(Or simply create a new empty file named `dev.sqlite3` in the root folder using your code editor).*
+   - **Mac/Linux:**
+     ```bash
+     touch dev.sqlite3
+     ```
+
 5. Set up the database schema and mock data:
    ```bash
    npx knex migrate:latest
    npm run seed
    ```
+
 6. Run both the backend and frontend concurrently:
    ```bash
    npm run dev
    ```
-   The frontend will start at `http://localhost:5173` and the backend at `http://localhost:3000`.
+   The frontend will start at `http://localhost:5173` (or the next available port) and the backend at `http://localhost:3000`.
 
-## Technical Assessment Instructions
+7. If the frontend starts on a different port (e.g., 5174), update the `CLIENT_URL` in `.env`:
+   ```
+   CLIENT_URL=http://localhost:5174
+   ```
+   Then restart the backend.
 
-This repository contains several intentional bugs for the purpose of a technical debugging interview.
+## Environment Variables (`.env`)
 
-### Your Task:
+```
+PORT=3000
+JWT_SECRET=your_jwt_secret_here
+CLIENT_URL=http://localhost:5173
+VITE_APP_API_URL=http://localhost:3000/api
+```
 
-1. Run the application locally and interact with the UI.
-2. Identify the bugs across the frontend, API, and backend/database layers.
-3. Debug and fix the issues you encounter.
+## API Endpoints
 
-### Submission Instructions
-To evaluate your debugging skills, please follow these submission guidelines carefully:
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| POST | `/api/auth/register` | No | Register a new user |
+| POST | `/api/auth/login` | No | Login |
+| POST | `/api/movies/get-all` | Yes | List movies (paginated) |
+| GET | `/api/movies/:id` | Yes | Get movie by ID |
+| POST | `/api/movies` | Yes | Create movie |
+| PUT | `/api/movies/:id` | Yes | Update movie |
+| DELETE | `/api/movies/:id` | Yes | Delete movie |
+| POST | `/api/actors/get-all` | Yes | List actors |
+| POST | `/api/actors` | Yes | Create actor |
+| PUT | `/api/actors/:id` | Yes | Update actor |
+| DELETE | `/api/actors/:id` | Yes | Delete actor |
+| POST | `/api/producers/get-all` | Yes | List producers |
+| POST | `/api/producers` | Yes | Create producer |
+| PUT | `/api/producers/:id` | Yes | Update producer |
+| DELETE | `/api/producers/:id` | Yes | Delete producer |
 
-1. Create a new repository on your GitHub account and push this codebase to it.
-2. Debug the application and commit your code fixes directly to your new repository.
-3. For every bug you find and fix, document it in a Google Doc using the format provided in the `Candidate_Bug_Report.md` template. Please explain the symptom and your fix in plain English.
-4. Add the link to your Google Doc at the top of your repository's `README.md` (make sure the Google Doc permissions are set to "Anyone with the link can view").
-5. Share the link to your new repository with your recruiter or interviewer to complete the assessment.
+## Assumptions
 
+- SQLite is used for local development (no external DB setup needed).
+- Pre-seeded data with 5 users, 41 producers, 142 actors, and 93 movies.
+- User passwords in seed data are pre-hashed with bcrypt — register a new account to log in.
+- Soft-delete is used for movies (`deleted_at` column).
 
+## Bugs Fixed
+
+All 16 identified bugs have been fixed. See the [Bug Report Google Doc](https://docs.google.com/document/d/1bjBPinDobbGGYf21VBRReUQeBDufZeWl0uk8loJuOFI/edit?usp=sharing) for full details.
