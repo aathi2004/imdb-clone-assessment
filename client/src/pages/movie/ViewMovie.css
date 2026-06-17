@@ -1,1 +1,13 @@
-
+.viewmovie-overlay-wrapper { position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 100; }
+.viewmovie-overlay-background { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); }
+.viewmovie-overlay-content { position: relative; background: #fff; border-radius: 12px; width: 680px; max-height: 90vh; overflow-y: auto; padding: 24px; }
+.viewmovie-close-btn { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 24px; cursor: pointer; color: #999; z-index: 1; }
+.viewmovie-title { margin: 0 0 20px; font-size: 22px; }
+.viewmovie-content { display: flex; gap: 24px; }
+.viewmovie-image-section { width: 220px; flex-shrink: 0; }
+.viewmovie-image { width: 220px; height: 300px; object-fit: cover; border-radius: 8px; }
+.viewmovie-info-section { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+.viewmovie-info-row { display: flex; gap: 8px; }
+.viewmovie-info-row .label { font-weight: 600; color: #555; min-width: 100px; }
+.viewmovie-info-row .value { color: #333; }
+.tag-wrap { display: flex; flex-wrap: wrap; gap: 4px; }

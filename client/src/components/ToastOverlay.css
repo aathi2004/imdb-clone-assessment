@@ -1,1 +1,5 @@
-
+.toast-overlay { position: fixed; top: 20px; right: 20px; z-index: 9999; padding: 12px 24px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); font-size: 14px; animation: slideIn 0.3s ease; }
+.toast-overlay.success { background: #f6ffed; border: 1px solid #b7eb8f; color: #52c41a; }
+.toast-overlay.error { background: #fff2f0; border: 1px solid #ffccc7; color: #ff4d4f; }
+.toast-message { display: flex; align-items: center; gap: 8px; }
+@keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }

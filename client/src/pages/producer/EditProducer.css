@@ -1,1 +1,18 @@
-
+.edit-producer-overlay-wrapper { position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 100; }
+.edit-producer-overlay-background { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); }
+.edit-producer-overlay-content { position: relative; background: #fff; border-radius: 12px; width: 540px; max-height: 90vh; overflow-y: auto; padding: 24px; }
+.edit-producer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.edit-producer-header h2 { margin: 0; font-size: 20px; }
+.edit-producer-close-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: #999; }
+.edit-producer-body { display: flex; gap: 24px; }
+.edit-producer-image-section { width: 200px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.edit-producer-file-input { width: 100%; }
+.edit-producer-image-preview { width: 160px; height: 160px; object-fit: cover; border-radius: 8px; border: 2px solid #e8e8e8; }
+.edit-producer-remove-btn { background: #ff4d4f; color: #fff; border: none; padding: 4px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+.edit-producer-form-section { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+.edit-producer-form-row { display: flex; flex-direction: column; gap: 4px; }
+.edit-producer-label { font-size: 13px; font-weight: 600; color: #555; }
+.edit-producer-input { padding: 8px 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 14px; }
+.edit-producer-textarea { padding: 8px 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 14px; resize: vertical; min-height: 80px; }
+.edit-producer-submit-btn { padding: 10px; background: #1890ff; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 15px; font-weight: 600; }
+.edit-producer-submit-btn:disabled { background: #91d5ff; cursor: not-allowed; }

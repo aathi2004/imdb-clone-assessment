@@ -1,1 +1,14 @@
-
+.admin-layout { display: flex; flex-direction: column; min-height: 100vh; }
+.navbar { display: flex; justify-content: space-between; align-items: center; background: #001529; color: #fff; padding: 0 24px; height: 60px; }
+.navbar-left { display: flex; align-items: center; gap: 16px; }
+.logo { height: 40px; cursor: pointer; }
+.user-profile { display: flex; flex-direction: column; }
+.profile-name { font-weight: 600; font-size: 14px; }
+.profile-role { font-size: 12px; opacity: 0.7; }
+.navbar-right { display: flex; gap: 4px; }
+.navbar-item { display: flex; align-items: center; gap: 6px; padding: 8px 16px; cursor: pointer; border-radius: 6px; transition: background 0.2s; }
+.navbar-item:hover { background: rgba(255,255,255,0.1); }
+.navbar-item.active { background: #1890ff; }
+.navbar-item .icon { font-size: 18px; }
+.navbar-item .label { font-size: 14px; }
+.content { flex: 1; padding: 24px; background: #f0f2f5; }
